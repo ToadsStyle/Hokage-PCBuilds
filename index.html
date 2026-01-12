@@ -1,35 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hokage PC Builds</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
+    /* GLOBAL STYLES */
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0f0f0f;
-      color: #ffffff;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
+      line-height: 1.6;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      background: #111;
+      text-align: center;
+      padding: 40px 20px;
+      background-image: url('https://i.imgur.com/Q4XHJfB.jpg'); /* Placeholder Hokage-style background */
+      background-size: cover;
+      background-position: center;
+      color: #ff6f00;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-family: 'Press Start 2P', cursive;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin: 10px 0 0 0;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #222;
       display: flex;
       justify-content: center;
-      align-items: center;
-      height: 100vh;
+      padding: 12px 0;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #ff6f00;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover { color: #fff; }
+
+    /* SECTIONS */
+    section {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 40px auto;
+      background: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #ff6f00;
       text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 1px 1px 3px #000;
     }
-    h1 {
-      color: #ff3b3b;
-      font-size: 3rem;
+
+    ol, ul { margin-left: 20px; }
+
+    /* FORM STYLING */
+    form input, form textarea, form select {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 6px;
+      border: 1px solid #444;
+      background: #222;
+      color: #fff;
     }
-    p {
-      color: #cccccc;
-      font-size: 1.1rem;
+
+    form input:focus, form textarea:focus, form select:focus {
+      border-color: #ff6f00;
+      outline: none;
     }
+
+    form button {
+      padding: 12px 25px;
+      background: #ff6f00;
+      color: #111;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    form button:hover { background: #ffa040; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: #ff6f00;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 600px) {
+      header h1 { font-size: 2rem; }
+      nav a { margin: 10px; font-size: 0.9rem; }
+    }
+
   </style>
 </head>
 <body>
-  <div>
-    <h1>Hokage PC Builds</h1>
-    <p>Custom gaming PCs — coming soon.</p>
-  </div>
+
+<header>
+  <h1>Hokage PC Builds</h1>
+  <p>Affordable Custom PC Builds Without the Stress</p>
+  <p>Payment options available upon request</p>
+</header>
+
+<nav>
+  <a href="#how-it-works">How It Works</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#request-form">Build Request</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<section id="how-it-works">
+  <h2>How It Works</h2>
+  <ol>
+    <li>Submit a build request through the form</li>
+    <li>I review your parts list and confirm compatibility</li>
+    <li>You ship the parts to me</li>
+    <li>Parts are inspected when they arrive</li>
+    <li>You receive an invoice for the remaining balance</li>
+    <li>I build, test, and configure your PC</li>
+    <li>Your PC is safely packed and shipped back to you</li>
+  </ol>
+  <p>Affordable pricing. Clear communication. No stress. Video calls available for questions.</p>
+</section>
+
+<section id="pricing">
+  <h2>Pricing</h2>
+  <ul>
+    <li><strong>Basic PC Build</strong> – $60 (Assembly + power-on testing)</li>
+    <li><strong>PC Build + Cable Management</strong> – $80 (Clean wiring for airflow & looks)</li>
+    <li><strong>Windows Install & Setup</strong> – $25</li>
+    <li><strong>ARGB Lighting Setup (Optional)</strong> – $20 (Clean color sync or fun effects)</li>
+    <li><strong>Case Swap (same parts, new RGB case)</strong> – $50</li>
+  </ul>
+  <p><strong>Deposit:</strong> $30 non-refundable, applied toward final invoice</p>
+</section>
+
+<section id="request-form">
+  <h2>Build Request Form</h2>
+  <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="city">City & State:</label>
+    <input type="text" id="city" name="city" required>
+
+    <label for="parts-have">Parts You Already Have:</label>
+    <textarea id="parts-have" name="parts-have" rows="4"></textarea>
+
+    <label for="parts-need">Parts You Still Need Help With:</label>
+    <textarea id="parts-need" name="parts-need" rows="4"></textarea>
+
+    <label for="rgb">Interested in RGB Lighting?</label>
+    <select id="rgb" name="rgb">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+
+    <label for="case-swap">Case Swap Needed?</label>
+    <select id="case-swap" name="case-swap">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+
+    <label for="video-call">Would you like a video call?</label>
+    <select id="video-call" name="video-call">
+      <option value="no">No</option>
+      <option value="yes">Yes</option>
+    </select>
+
+    <label for="notes">Notes / Special Requests:</label>
+    <textarea id="notes" name="notes" rows="4"></textarea>
+
+    <button type="submit">Submit Build Request</button>
+  </form>
+</section>
+
+<section id="contact">
+  <h2>Contact / Questions</h2>
+  <p>If you have questions, want a video call, or just want to check in:</p>
+  <form action="mailto:youremail@example.com" method="post" enctype="text/plain">
+    <label for="contact-name">Name:</label>
+    <input type="text" id="contact-name" name="contact-name" required>
+
+    <label for="contact-email">Email:</label>
+    <input type="email" id="contact-email" name="contact-email" required>
+
+    <label for="message">Message / Questions:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <button type="submit">Send Message</button>
+  </form>
+  <p>Video calls available for setup questions or build guidance.</p>
+</section>
+
+<footer>
+  <p>&copy; 2026 Hokage PC Builds – Hanford, California</p>
+</footer>
+
 </body>
 </html>
